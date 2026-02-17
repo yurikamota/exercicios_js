@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const anoAtual = new Date().getFullYear();
+
+    console.log("Digite o ano de nascimento:");
+
+    let anoNascimento = parseInt(prompt("Ano de nascimento:"));
+
+    let idade = anoAtual - anoNascimento;
+
+    document.write('Você tem ' + idade + ' anos de idade.');
+
+   </script> 
+</body>
+</html>
