@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculadora</title>
+</head>
+<body>
+    <h1>Mini Calculadora</h1>
+    <p id="resultado"></p>
+
+    <script>
+        let num1 = parseFloat(prompt("Digite o primeiro número: "));
+        let num2 = parseFloat(prompt("Digite o segundo número: "));
+        let operacao = prompt("Digite a operação (+, -, *, /): ");
+
+        let resultado;
+
+        if (operacao === "+") {
+            resultado = num1 + num2;
+        } else if (operacao === "-") {
+            resultado = num1 - num2;
+        } else if (operacao === "*") {
+            resultado = num1 * num2; 
+        } else if (operacao === "/") {
+            resultado = num1 / num2;
+        } else {
+            resultado = "Operação inválida.";
+        }
+
+        document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+
+    </script>
+</body>
+</html>
