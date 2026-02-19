@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Número</title>
+</head>
+<body>
+    <h1>Verificação de Número</h1>
+    <p id="resultado"></p>
+
+    <script>
+        let entrada = prompt("Digite um número: ");
+        let numero = Number(entrada);
+
+        if (isNaN(numero)) {
+            document.getElementById("resultado").innerHTML = "Entrada inválida. Por favor, digite um número.";
+        } else {
+            if (numero === 0) {
+                document.getElementById("resultado").innerHTML = "O número é zero.";
+            } else {
+                let paridade = (numero % 2 === 0) ? "par" : "ímpar";
+                let sinal = (numero > 0) ? "positivo" : "negativo";
+                document.getElementById("resultado").innerHTML = `O número é ${paridade} e ${sinal}.`;
+            }
+        }
+    </script>
+</body>
+</html>
