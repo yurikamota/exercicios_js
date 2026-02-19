@@ -27,3 +27,5 @@ rl.question("Digite o primeiro número: ", function(num1) {
     });
 
 });
+
+// no terminal escreva "node comparar.js" para executar o programa.

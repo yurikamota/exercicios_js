@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculadora</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #e2c6ed;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #50086e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Digite o primeiro número</p><br>
+        <input type="number" id="num1"><br>
+        <p>Digite a operação (+, -, *, /)</p><br>
+        <input type="text" id="operacao"><br>
+        <p>Digite o segundo número</p><br>
+        <input type="number" id="num2"><br>
+        <button onclick="calcular()">Calcular</button>
+        <p id="resultado">Resultado</p><br>
+        
+
+    </div>
+
+    <script>
+        function calcular() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operacao = document.getElementById("operacao").value;
+
+            let resultado;
+            if (operacao === "+") {
+                resultado = num1 + num2;
+            } else if (operacao === "-") {
+                resultado = num1 - num2;
+            } else if (operacao === "*") {
+                resultado = num1 * num2;  
+            } else if (operacao === "/") {
+                if (num2 === 0) {
+                    resultado = "Não é possível dividir por zero.";
+                } else {
+                    resultado = num1 / num2;
+                }
+            } else {
+                resultado = "Operação inválida.";
+            }
+
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>
