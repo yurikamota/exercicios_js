@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Test</title>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .container {
+            background-color: rgba(141, 235, 238, 0.828);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container_student {
+            text-align: center;
+        }
+
+        #studentList {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        #studentList li {
+            background-color: #f7f7f7;
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 0.5px solid #333;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #dcd8d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Student Score Test</h2>
+
+    <input type="text" id="studenName" placeholder="Enter student name"><br><br>
+    <input type="number" id="studentScore" placeholder="Enter student score"><br><br>
+
+    <button onclick="evaluateScore()">Evaluate Score</button>
+
+    <p id="result"></p>
+    </div>
+
+    <div class="container_student">
+        <h3>Student List</h3>
+        <ul id="studentList"></ul>
+    </div>
+
+    <script>
+       let students = []; 
+
+    function evaluateScore() {
+    const nameInput = document.getElementById("studenName");
+    const scoreInput = document.getElementById("studentScore");
+    const resultElement = document.getElementById("result");
+
+    const name = nameInput.value.trim();
+    const score = parseFloat(scoreInput.value);
+
+    if (isNaN(score) || score < 0 || score > 100) {
+        resultElement.textContent = "Please enter a valid score.";
+        resultElement.style.color = "black";
+        return;
+    }
+
+    let resultText = "";
+
+    if (score >= 70) {
+        resultText = "Pass with Distinction";
+        resultElement.style.color = "green";
+    } else if (score >= 50) {
+        resultText = "Pass";
+        resultElement.style.color = "blue";
+    } else {
+        resultText = "Fail";
+        resultElement.style.color = "red";
+    }
+
+    resultElement.textContent = `${name} - ${resultText}`;
+
+    const student = {
+        name: name,
+        score: score,
+        result: resultText
+    };
+
+    students.push(student);
+
+    renderStudents();
+
+    nameInput.value = "";
+    scoreInput.value = "";
+}
+
+    function renderStudents() {
+    const listElement = document.getElementById("studentList");
+    listElement.innerHTML = "";
+
+    students.forEach(function(student) {
+        const li = document.createElement("li");
+        li.textContent = `${student.name} - ${student.score} (${student.result})`;
+        listElement.appendChild(li);
+    });
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Test</title>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(141, 235, 238, 0.828);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 0.5px solid #333;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #dcd8d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Student Score Test</h2>
+
+    <input type="text" id="studenName" placeholder="Enter student name"><br><br>
+    <input type="number" id="studentScore" placeholder="Enter student score"><br><br>
+
+    <button onclick="evaluateScore()">Evaluate Score</button>
+
+    <p id="result"></p>
+    </div>
+
+    <script>
+        function evaluateScore() {
+            const name = document.getElementById("studenName").value;
+            const score = parseFloat(document.getElementById("studentScore").value);
+            const resultElement = document.getElementById("result");
+
+
+            if (isNaN(score) || score < 0 || score > 100) {
+               resultElement.textContent = "Please enter a valid score.";
+               resultElement.style.color = "black";
+               return;
+
+            } else if (score >= 70) {
+                resultElement.textContent = `${name} Pass with Distinction`;
+                resultElement.style.color = "green";
+            } else if (score >= 50) {
+                resultElement.textContent = `${name} Pass`;
+                resultElement.style.color = "blue";
+            } else if (score <= 49) {
+                resultElement.textContent = `${name} Fail`;
+                resultElement.style.color = "red";
+            }
+
+        }
+    </script>
+</body>
+</html>
