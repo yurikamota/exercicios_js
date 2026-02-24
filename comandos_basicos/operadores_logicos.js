@@ -21,7 +21,7 @@ if (variavelTexto != "um") {
 
 if (!variavelLogica) {
     console.log("Negação de variavelLogica é verdadeira, ou seja, variavelLogica é falsa.");
-}
+} // Na linha 22 criamos uma decisão lógica usando o operador de negação !. A expressão !variavelLogica retorna verdadeiro se variavelLogica for falsa, e retorna falso se variavelLogica for verdadeira. Como variavelLogica é false, a expressão !variavelLogica é verdadeira, e a mensagem "Negação de variavelLogica é verdadeira, ou seja, variavelLogica é falsa." será exibida no console.
 
 if (variavelTexto != variavel1) {
     console.log("Valor das variáveis é diferente");
