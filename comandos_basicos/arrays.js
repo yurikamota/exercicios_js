@@ -24,3 +24,16 @@ console.log(arrPrato); // Imprime o array atualizado de pratos no console. O res
 var arrEmenta = ['Matematica', 'Português', 'História'];
 arrEmenta.unshift('Geografia'); // Aqui estamos usando o método unshift para adicionar o elemento 'Geografia' no início do array arrEmenta. O array agora contém ['Geografia', 'Matematica', 'Português', 'História'].
 console.log(arrEmenta); // Imprime o array atualizado de ementa no console. O resultado será: ['Geografia', 'Matematica', 'Português', 'História'].
+
+// Pop remove o último elemento do array:
+
+var arrEmenta = ['Matematica', 'Português', 'História'];
+arrEmenta.unshift('Geografia');
+arrEmenta.pop(); // Aqui estamos usando o método pop para remover o último elemento do array arrEmenta, que é 'História'. O array agora contém ['Geografia', 'Matematica', 'Português'].
+console.log(arrEmenta);
+
+// Shift remove o primeiro elemento do array:
+
+var arrMedicos = ['Dr. Silva', 'Dra. Costa', 'Dr. Oliveira'];
+arrMedicos.shift(); // Aqui estamos usando o método shift para remover o primeiro elemento do array arrMedicos, que é 'Dr. Silva'. O array agora contém ['Dra. Costa', 'Dr. Oliveira'].
+console.log(arrMedicos); // Imprime o array atualizado de médicos no console. O resultado será: ['Dra. Costa', 'Dr. Oliveira'].
