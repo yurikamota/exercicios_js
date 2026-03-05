@@ -46,3 +46,12 @@ if (arrFrutas.indexOf('Maçã') !== -1) {
     arrFrutas.shift(); // Aqui estamos usando o método shift para remover o primeiro elemento do array arrFrutas, que é 'Maçã', porque o indexOf retornou um índice diferente de -1, indicando que 'Maçã' está presente no array.
 }
 console.log(arrFrutas); // Imprime o array atualizado de frutas no console. O resultado será: ['Banana', 'Laranja', 'Uva'].
+
+// Splice permite adicionar ou remover elementos de um array em uma posição específica.
+
+var arrCores = ['Vermelho', 'Verde', 'Azul', 'Amarelo'];
+var posicao = arrCores.indexOf('Azul'); // Aqui estamos usando o método indexOf para encontrar a posição do elemento 'Azul' no array arrCores. O resultado será 2, já que 'Azul' é o terceiro elemento (índice 2).
+if (posicao !== -1) {
+    arrCores.splice(posicao, 1); // Aqui estamos usando o método splice para remover o elemento na posição encontrada (índice 2, que é 'Azul') do array arrCores. O array agora contém ['Vermelho', 'Verde', 'Amarelo'].
+}
+console.log(arrCores); // Imprime o array atualizado de cores no console. O resultado será: ['Vermelho', 'Verde', 'Amarelo'].
