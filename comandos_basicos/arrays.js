@@ -37,3 +37,12 @@ console.log(arrEmenta);
 var arrMedicos = ['Dr. Silva', 'Dra. Costa', 'Dr. Oliveira'];
 arrMedicos.shift(); // Aqui estamos usando o método shift para remover o primeiro elemento do array arrMedicos, que é 'Dr. Silva'. O array agora contém ['Dra. Costa', 'Dr. Oliveira'].
 console.log(arrMedicos); // Imprime o array atualizado de médicos no console. O resultado será: ['Dra. Costa', 'Dr. Oliveira'].
+
+// indexOf retorna o índice do primeiro elemento encontrado no array que corresponde ao valor especificado. Se o elemento não for encontrado, retorna -1.
+
+var arrFrutas = ['Maçã', 'Banana', 'Laranja'];
+arrFrutas.push('Uva');
+if (arrFrutas.indexOf('Maçã') !== -1) { 
+    arrFrutas.shift(); // Aqui estamos usando o método shift para remover o primeiro elemento do array arrFrutas, que é 'Maçã', porque o indexOf retornou um índice diferente de -1, indicando que 'Maçã' está presente no array.
+}
+console.log(arrFrutas); // Imprime o array atualizado de frutas no console. O resultado será: ['Banana', 'Laranja', 'Uva'].
