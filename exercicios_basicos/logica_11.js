@@ -1,4 +1,4 @@
-// 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas  e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
+// 11 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas  e se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
 
 let nota1 = parseFloat(prompt("Digite a primeira nota: "));
 let nota2 = parseFloat(prompt("Digite a segunda nota: "));
