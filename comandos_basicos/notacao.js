@@ -25,3 +25,4 @@ var carro = {
 // A notação é basicamente as caracteristicas do objeto dentro da variavel. 
 // No final do código usamos um conceito chamado método que são ações que o objeto pode realizar, como ligar os faróis, acelerar e frear.
 // Utilizamos o ponto (.) para acessar as propriedades e métodos do objeto.
+// this é uma palavra-chave que se refere ao próprio objeto, permitindo acessar suas propriedades e métodos dentro de seus métodos.
